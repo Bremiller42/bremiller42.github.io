@@ -4,6 +4,7 @@
     --text: #e8e8e8;
     --text-dim: #9a9a9a;
     --accent: #15c6c4;
+    --accent-dim: #0e8f8d;
     --warm: #f2a65a;
     --border: #2a2a2a;
 }
@@ -47,7 +48,7 @@ header p {
     margin: 1rem;
 }
 
-.project-card h2 {
+.project-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
 }
@@ -106,4 +107,37 @@ header p {
     color: var(--text-dim);
     font-size: 0.85rem;
     font-family: monospace;
+}
+
+.skills-group {
+  margin-bottom: 2rem;
+}
+
+.skills-group h4 {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.tag-list.warm .tag {
+  border-color: var(--warm);
+  color: var(--warm);
 }
