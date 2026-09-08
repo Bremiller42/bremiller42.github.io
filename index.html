@@ -15,26 +15,74 @@
   <section id="about">
     <div class="container">
       <h2>About</h2>
-      <p>I'm an AAS Data Science student at Wake Technical Community College, working toward a career in AI/ML engineering. Alongside coursework in AI fundamentals, data structures, and Python, I spend my free time building custom firmware for ESP32 hardware, and agentic wrappers for LLMs. That mix of software and hardware curiosity is what draws me toward edge AI and embedded machine learning: I like understanding systems from the silicon up, not just the API down.</p>
+      <p>
+        I'm an AAS Data Science student at Wake Technical Community College,
+        working toward a career in AI/ML engineering. Alongside coursework in
+        AI fundamentals, data structures, and Python, I spend my free time
+        building custom firmware for ESP32 hardware, and agentic wrappers for LLMs. 
+        That mix of software and hardware curiosity is what draws me toward edge AI and embedded
+        machine learning: I like understanding systems from the silicon up, not just the API down.
+      </p>
     </div>
   </section>
+
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
 
       <div class="project-card">
         <h2>HearTheWeb</h2>
-        <p>Sonifies live network traffic — plays a distinct stereo tone for
-        every TCP or UDP packet seen on the network, with frequency and
-        channel mapped to protocol and direction (upstream vs. downstream).
-        Currently a work in progress; playback lags under heavy traffic,
-        which is the next thing to profile and fix.
+          <p class="project-meta">Python</p>
+
+        <p>
+          Sonifies live network traffic — plays a distinct stereo tone for
+          every TCP or UDP packet seen on the network, with frequency and
+          channel mapped to protocol and direction (upstream vs. downstream).
+          Currently a work in progress; playback lags under heavy traffic,
+          which is the next thing to profile and fix.
         </p>
-        <a href="https://github.com/bremiller42/HearTheWeb" target="_blank">View on GitHub  →</a>"
+        <a href="https://github.com/bremiller42/HearTheWeb" target="_blank">View on GitHub  →</a>
       </div>
 
     </div>
-  </section>
 
+    <div class="project-card">
+      <h3>Custom ESP32 Smartwatch Firmware</h3>
+      <p class="project-meta">C++ · ESP-IDF · LVGL</p>
+      <p>
+        Fully custom ESP32 firmware built on ESP-IDF 5.3 and LVGL 8.3, since the
+        display driver required a newer ESP-IDF version than Arduino-ESP32
+        currently supports. On device logging, heartrate scanning, and a custom watchface with a unique UI.
+      </p>
+      <a href="https://github.com/bremiller42/Smartwatch" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Crewz</h3>
+      <p class="project-meta">Kotlin · Android</p>
+      <p>
+        A car-club social app concept combining an Instagram-style feed with
+        live GPS route sharing, so members of a group drive could sync up and
+        follow the same route together in real time. Currently on hiatus, but
+        a solid proof-of-concept for location-based social features.
+      </p>
+      <a href="https://github.com/bremiller42/Crewz" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Noesis</h3>
+      <p class="project-meta">Python · Ollama / LM Studio / llama.cpp · ChromaDB</p>
+      <p>
+        A self-hosted local AI assistant that runs entirely offline — no cloud
+        API required. Built around a tool-calling agent loop with persistent
+        vector memory, subagents for specialized tasks (coding, debugging),
+        and support for multiple LLM backends including GPU-quantized
+        llama.cpp inference. Includes a custom orchestration layer that
+        decomposes each user turn into intent and constraints before
+        generating a response, and integrates with Telegram and a web chat UI.
+        Currently private while still in active development.
+      </p>
+    </div>
+  </section>
 </body>
 </html>
