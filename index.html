@@ -31,9 +31,23 @@
       <h2>Projects</h2>
 
       <div class="project-card">
-        <h2>HearTheWeb</h2>
-          <p class="project-meta">Python</p>
+        <h3>Noesis</h3>
+        <p class="project-meta">Python · Ollama / LM Studio / llama.cpp · ChromaDB</p>
+        <p>
+          A self-hosted local AI assistant that runs entirely offline — no cloud
+          API required. Built around a tool-calling agent loop with persistent
+          vector memory, subagents for specialized tasks (coding, debugging),
+          and support for multiple LLM backends including GPU-quantized
+          llama.cpp inference. Includes a custom orchestration layer that
+          decomposes each user turn into intent and constraints before
+          generating a response, and integrates with Telegram and a web chat UI.
+          Currently private while still in active development.
+        </p>
+      </div>
 
+      <div class="project-card">
+        <h2>HearTheWeb</h2>
+        <p class="project-meta">Python</p>
         <p>
           Sonifies live network traffic — plays a distinct stereo tone for
           every TCP or UDP packet seen on the network, with frequency and
@@ -44,45 +58,94 @@
         <a href="https://github.com/bremiller42/HearTheWeb" target="_blank">View on GitHub  →</a>
       </div>
 
-    </div>
+      <div class="project-card">
+        <h3>Custom ESP32 Smartwatch Firmware</h3>
+        <p class="project-meta">C++ · ESP-IDF · LVGL</p>
+        <p>
+          Fully custom ESP32 firmware built on ESP-IDF 5.3 and LVGL 8.3, since the
+          display driver required a newer ESP-IDF version than Arduino-ESP32
+          currently supports. On device logging, heartrate scanning, and a custom watchface with a unique UI.
+        </p>
+        <a href="https://github.com/bremiller42/Smartwatch" target="_blank">View on GitHub →</a>
+      </div>
 
-    <div class="project-card">
-      <h3>Custom ESP32 Smartwatch Firmware</h3>
-      <p class="project-meta">C++ · ESP-IDF · LVGL</p>
-      <p>
-        Fully custom ESP32 firmware built on ESP-IDF 5.3 and LVGL 8.3, since the
-        display driver required a newer ESP-IDF version than Arduino-ESP32
-        currently supports. On device logging, heartrate scanning, and a custom watchface with a unique UI.
-      </p>
-      <a href="https://github.com/bremiller42/Smartwatch" target="_blank">View on GitHub →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Crewz</h3>
-      <p class="project-meta">Kotlin · Android</p>
-      <p>
-        A car-club social app concept combining an Instagram-style feed with
-        live GPS route sharing, so members of a group drive could sync up and
-        follow the same route together in real time. Currently on hiatus, but
-        a solid proof-of-concept for location-based social features.
-      </p>
-      <a href="https://github.com/bremiller42/Crewz" target="_blank">View on GitHub →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Noesis</h3>
-      <p class="project-meta">Python · Ollama / LM Studio / llama.cpp · ChromaDB</p>
-      <p>
-        A self-hosted local AI assistant that runs entirely offline — no cloud
-        API required. Built around a tool-calling agent loop with persistent
-        vector memory, subagents for specialized tasks (coding, debugging),
-        and support for multiple LLM backends including GPU-quantized
-        llama.cpp inference. Includes a custom orchestration layer that
-        decomposes each user turn into intent and constraints before
-        generating a response, and integrates with Telegram and a web chat UI.
-        Currently private while still in active development.
-      </p>
+      <div class="project-card">
+        <h3>Crewz</h3>
+        <p class="project-meta">Kotlin · Android</p>
+        <p>
+          A car-club social app concept combining an Instagram-style feed with
+          live GPS route sharing, so members of a group drive could sync up and
+          follow the same route together in real time. Currently on hiatus, but
+          a solid proof-of-concept for location-based social features.
+        </p>
+        <a href="https://github.com/bremiller42/Crewz" target="_blank">View on GitHub →</a>
+      </div>
     </div>
   </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-group">
+        <h4>Languages</h4>
+        <span class="tag">Python</span>
+        <span class="tag">Kotlin</span>
+        <span class="tag">C</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Bash</span>
+      </div>
+      <div class="skills-group">
+        <h4>Tools and Platforms</h4>
+        <span class="tag">Single Board Computers (Raspberry Pi)</span>
+        <span class="tag">Microcontrollers (ESP32, Arduino)</span>
+\       <span class="tag">Ollama / llama.cpp</span>
+        <span class="tag">LM Studio</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">Git</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Windows</span>
+      
+      </div>
+    </div>
+    <div class="skills-group">
+      <h4>Currently Learning</h4>
+      <span class="tag">Advanced Python</span>
+      <span class="tag">Data Structures and Algorithms</span>
+      <span class="tag">Artificial Intelligence I</span>
+      <span class="tag">Software Development</span>
+    </div>
+    <div class="skills-group">
+      <h4>Other Skills</h4>
+      <span class="tag">Quality Assurance and Testing</span>
+      <span class="tag">Team Leadership</span>
+      <span class="tag">Vendor & Inventory Management</span>
+      <span class="tag">Customer Service</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>Project Tester</h3>
+          <span class="experience-date">Mar 2021 - Oct 2021</span>
+        </div>
+        <p class="project-meta">Experis · Halo Infinite (343 Industries)</p>
+        <p>
+          Key member of a QA testing team for Halo Infinite, focused on
+          operational efficiency and bug reporting. Managed testing equipment
+          and daily build installations, and performed focused-area testing
+          ahead of release.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>

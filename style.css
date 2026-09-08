@@ -10,7 +10,7 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: .5rem;
     padding: 0;
 }
 
@@ -70,4 +70,40 @@ header p {
 .project-card a:hover {
     color: var(--accent-dim);
     text-decoration: underline;
+}
+
+.experience-item {
+    border-left: 2px solid var(--accent-dim);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience-header h3 {
+    font-size: 1.15rem;
+}
+
+.experience-date  {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-family: monospace;
 }
