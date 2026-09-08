@@ -27,10 +27,20 @@ header h1, section h2, .terminal-label, .cursor {
   font-family: 'VT323', monospace;
 }
 
+h1 {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
 header {
-    padding: 4rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 
 header h1 {
@@ -68,7 +78,7 @@ header p {
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: var(--morph-radius, 8px);
+  border-radius: var(--morph-radius-lg, 8px);
 }
 
 .project-card a {
@@ -155,10 +165,9 @@ header p {
 .tag {
   background-color: var(--bg-glass);
   border: 1px solid var(--accent-dim);
-  border-radius: var(--morph-radius, 20px);
+  border-radius: var(--morph-radius-sm, 20px);
   color: var(--accent-dim);
   padding: 0.4rem 0.9rem;
-  border-radius: 20px;
   font-size: 0.9rem;
   font-family: monospace;
 }
@@ -175,6 +184,25 @@ header p {
 
 .cursor {
   animation: blink 1s step-end infinite;
+}
+
+.font-retro, .font-future {
+  white-space: nowrap;
+  font-size: clamp(2rem, 8vw, 4rem);
+}
+
+.font-retro {
+  font-family: 'VT323', monospace;
+  color: rgb(51, 255, 51);
+}
+
+.font-future {
+  font-family: 'Inter', sans-serif;
+  color: var(--accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 @keyframes blink {
