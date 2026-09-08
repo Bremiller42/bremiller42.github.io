@@ -1,6 +1,7 @@
 :root {
     --bg: #121212;
     --bg-alt: #1a1a1a;
+    --bg-glass: #15c6c407;
     --text: #e8e8e8;
     --text-dim: #9a9a9a;
     --accent: #15c6c4;
@@ -11,15 +12,19 @@
 
 * {
     box-sizing: border-box;
-    margin: .5rem;
+    margin: 0;
     padding: 0;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
     line-height: 1.6;
+}
+
+header h1, section h2, .terminal-label, .cursor {
+  font-family: 'VT323', monospace;
 }
 
 header {
@@ -29,8 +34,8 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
-    letter-spacing: -0.02em;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
     color: var(--accent);
 }
 
@@ -41,7 +46,7 @@ header p {
 }
 
 .project-card {
-    background-color: var(--bg-alt);
+    background-color: var(--bg-glass);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.5rem;
@@ -60,12 +65,19 @@ header p {
     margin-bottom: 0.75rem;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--morph-radius, 8px);
+}
+
 .project-card a {
     color: var(--accent);
     text-decoration: none;
     font-size: 0.9rem;
     display: inline-block;
     margin-top: 0.75rem;
+    align-self: flex-end;
 }
 
 .project-card a:hover {
@@ -113,6 +125,19 @@ header p {
   margin-bottom: 2rem;
 }
 
+.skills-group a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+.skills-group a:hover {
+    color: var(--accent-dim);
+    text-decoration: underline;
+}
+
 .skills-group h4 {
   color: var(--text-dim);
   font-size: 0.85rem;
@@ -128,9 +153,10 @@ header p {
 }
 
 .tag {
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background-color: var(--bg-glass);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--morph-radius, 20px);
+  color: var(--accent-dim);
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -141,3 +167,33 @@ header p {
   border-color: var(--warm);
   color: var(--warm);
 }
+
+.terminal-label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 999;
+  opacity: var(--scanline-opacity, 1);
+}
+
